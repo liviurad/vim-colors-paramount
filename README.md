@@ -1,5 +1,5 @@
 # The changes I did:
-* comments are orange/red
+* comments are dark cyan
 * lighter
 
 # Paramount
