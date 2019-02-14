@@ -1,3 +1,7 @@
+# The changes I did:
+* comments are orange/red
+* lighter
+
 # Paramount
 
 A minimal colorscheme for Vim that only puts emphasis on the paramount.
