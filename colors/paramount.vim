@@ -57,10 +57,12 @@ if &background == "dark"
   let s:norm_subtle     = s:medium_gray
   let s:purple          = s:light_purple
   let s:cyan            = s:light_cyan
+  let s:comment         = s:dark_cyan
   let s:green           = s:light_green
   let s:red             = s:light_red
   let s:visual          = s:light_purple
   let s:yellow          = s:light_yellow
+  let s:constant        = s:white
 else
   let s:bg              = s:actual_white
   let s:bg_subtle       = s:light_gray
@@ -69,10 +71,12 @@ else
   let s:norm_subtle     = s:medium_gray
   let s:purple          = s:dark_purple
   let s:cyan            = s:dark_cyan
+  let s:comment         = s:dark_cyan
   let s:green           = s:dark_green
   let s:red             = s:dark_red
   let s:visual          = s:dark_purple
   let s:yellow          = s:dark_yellow
+  let s:constant        = s:black
 endif
 
 " https://github.com/noahfrederick/vim-hemisu/
@@ -95,9 +99,9 @@ if &background != s:background
 endif
 
 call s:h("Cursor",        {"bg": s:purple, "fg": s:norm })
-call s:h("Comment",       {"fg": s:dark_cyan, "gui": "italic"})
+call s:h("Comment",       {"fg": s:comment, "gui": "italic"})
 
-call s:h("Constant",      {"fg": s:purple})
+call s:h("Constant",      {"fg": s:constant})
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
@@ -144,7 +148,7 @@ call s:h("NonText",       {"fg": s:medium_gray})
 call s:h("Directory",     {"fg": s:dark_blue})
 call s:h("ErrorMsg",      {"fg": s:red})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
-call s:h("Search",        {"bg": s:light_green, "fg": s:light_black})
+call s:h("Search",        {"bg": s:dark_green, "fg": s:light_black})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
@@ -180,7 +184,7 @@ else
 endif
 
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("PmenuSel",      {"fg": s:norm, "bg": s:purple})
+call s:h("PmenuSel",      {"fg": s:bg, "bg": s:norm, "gui": "bold", "cterm": "bold"})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
