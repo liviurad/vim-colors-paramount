@@ -1,5 +1,5 @@
 " Name:       paramount.vim
-" Version:    0.1.0
+" Version:    0.1.1
 " Maintainer: github.com/owickstrom
 " License:    The MIT License (MIT)
 "
@@ -49,35 +49,19 @@ let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 
 let s:background = &background
 
-if &background == "dark"
-  let s:bg              = s:black
-  let s:bg_subtle       = s:lighter_black
-  let s:bg_very_subtle  = s:subtle_black
-  let s:norm            = s:lighter_gray
-  let s:norm_subtle     = s:medium_gray
-  let s:purple          = s:light_purple
-  let s:cyan            = s:light_cyan
-  let s:comment         = s:dark_cyan
-  let s:green           = s:light_green
-  let s:red             = s:light_red
-  let s:visual          = s:light_purple
-  let s:yellow          = s:light_yellow
-  let s:constant        = s:white
-else
-  let s:bg              = s:actual_white
-  let s:bg_subtle       = s:light_gray
-  let s:bg_very_subtle  = s:lightest_gray
-  let s:norm            = s:light_black
-  let s:norm_subtle     = s:medium_gray
-  let s:purple          = s:dark_purple
-  let s:cyan            = s:dark_cyan
-  let s:comment         = s:dark_cyan
-  let s:green           = s:dark_green
-  let s:red             = s:dark_red
-  let s:visual          = s:dark_purple
-  let s:yellow          = s:dark_yellow
-  let s:constant        = s:black
-endif
+let s:bg              = s:black
+let s:bg_subtle       = s:lighter_black
+let s:bg_very_subtle  = s:subtle_black
+let s:norm            = s:lighter_gray
+let s:norm_subtle     = s:medium_gray
+let s:purple          = s:light_purple
+let s:cyan            = s:light_cyan
+let s:comment         = s:dark_cyan
+let s:green           = s:light_green
+let s:red             = s:light_red
+let s:visual          = s:light_purple
+let s:yellow          = s:light_yellow
+let s:constant        = s:white
 
 " https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
@@ -108,7 +92,7 @@ hi! link Boolean          Constant
 hi! link Float            Constant
 hi! link String           Constant
 
-"call s:h("Identifier",    {"fg": s:dark_blue})
+call s:h("Identifier",    {"fg": s:dark_blue})
 hi! link Identifier       Normal
 hi! link Function         Identifier
 
@@ -152,7 +136,7 @@ call s:h("Search",        {"bg": s:dark_yellow, "fg": s:light_black})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
-call s:h("CursorLineNr",  {"fg": s:purple, "bg": s:bg_very_subtle})
+call s:h("CursorLineNr",  {"fg": s:norm, "bg": s:bg})
 call s:h("Question",      {"fg": s:red})
 call s:h("StatusLine",    {"bg": s:bg_very_subtle})
 call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
@@ -219,10 +203,10 @@ hi link ALEWarningSign	SyntasticWarningSign
 hi link ALEErrorSign	SyntasticErrorSign
 
 " Signify, git-gutter
-hi link SignifySignAdd              LineNr
-hi link SignifySignDelete           LineNr
-hi link SignifySignChange           LineNr
-hi link GitGutterAdd                LineNr
-hi link GitGutterDelete             LineNr
-hi link GitGutterChange             LineNr
-hi link GitGutterChangeDelete       LineNr
+hi link SignifySignAdd              CursorLineNr
+hi link SignifySignDelete           CursorLineNr
+hi link SignifySignChange           CursorLineNr
+hi link GitGutterAdd                CursorLineNr
+hi link GitGutterDelete             CursorLineNr
+hi link GitGutterChange             CursorLineNr
+hi link GitGutterChangeDelete       CursorLineNr
