@@ -1,6 +1,6 @@
 " Name:       paramount.vim
-" Version:    0.1.1
-" Maintainer: github.com/owickstrom
+" Version:    0.1.2
+" Maintainer: github.com/liviurad
 " License:    The MIT License (MIT)
 "
 " A minimal colorscheme for Vim that only puts emphasis on the paramount.
