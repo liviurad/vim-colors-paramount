@@ -3,12 +3,14 @@
 " Maintainer: github.com/liviurad
 " License:    The MIT License (MIT)
 "
-" A minimal colorscheme for Vim that only puts emphasis on the paramount.
+" For of paramount vim coloscheme:
+"   A minimal colorscheme for Vim that only
+"   puts emphasis on the paramount.
 "
-" Based on the pencil and off colorschemes:
+" Originally based on the pencil and off colorschemes:
 "
-" https://github.com/reedes/vim-colors-pencil
-" https://github.com/reedes/vim-colors-off
+" Now it has even less colors, ephasises comments.
+" Some colors are modified to play well with airline 'angr' theme.
 "
 """
 hi clear
