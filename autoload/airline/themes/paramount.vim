@@ -6,7 +6,7 @@ scriptencoding utf-8
 let g:airline#themes#paramount#palette = {}
 let s:gui_black = "#1d1f21"
 let s:cterm_black = "0"
-let s:gui_light_white = '#f5f8f6'
+let s:gui_light_white = '#ffffff'
 let s:cterm_light_white = '15'
 let s:gui_blue = "#5f819d"
 let s:cterm_blue = "4"
