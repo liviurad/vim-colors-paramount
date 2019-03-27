@@ -23,6 +23,9 @@ let s:cterm_light_yellow = "11"
 let s:gui_purple = "#85678f"
 let s:cterm_purple = "5"
 
+let s:WARN = [ s:gui_light_white, s:gui_red, s:cterm_light_white, s:cterm_red, 'none' ]
+let s:ERR  = [ s:gui_light_white, s:gui_red, s:cterm_light_white, s:cterm_red, 'none' ]
+
 let s:N1 = [ s:gui_light_white, s:gui_blue, s:cterm_light_white, s:cterm_blue, 'none' ]
 let s:N2 = s:N1
 let s:N3 = [ s:gui_light_white, s:gui_light_blue, s:cterm_light_white, s:cterm_light_blue, 'none' ]
@@ -60,3 +63,37 @@ let g:airline#themes#paramount#palette.inactive = airline#themes#generate_color_
 let g:airline#themes#paramount#palette.inactive_modified = {
       \ 'airline_c': [ '#df0000', '', 160, '', '' ],
 \ }
+
+" Warnings
+let g:airline#themes#paramount#palette.normal.airline_warning = s:WARN
+let g:airline#themes#paramount#palette.normal_modified.airline_warning =
+    \ g:airline#themes#paramount#palette.normal.airline_warning
+
+let g:airline#themes#paramount#palette.insert.airline_warning =
+    \ g:airline#themes#paramount#palette.normal.airline_warning
+
+let g:airline#themes#paramount#palette.insert_modified.airline_warning =
+    \ g:airline#themes#paramount#palette.normal.airline_warning
+
+let g:airline#themes#paramount#palette.visual.airline_warning =
+    \ g:airline#themes#paramount#palette.normal.airline_warning
+
+let g:airline#themes#paramount#palette.replace.airline_warning =
+    \ g:airline#themes#paramount#palette.normal.airline_warning
+
+" Errors
+let g:airline#themes#paramount#palette.normal.airline_error = s:ERR
+let g:airline#themes#paramount#palette.normal_modified.airline_error =
+    \ g:airline#themes#paramount#palette.normal.airline_error
+
+let g:airline#themes#paramount#palette.insert.airline_error =
+    \ g:airline#themes#paramount#palette.normal.airline_error
+
+let g:airline#themes#paramount#palette.insert_modified.airline_error =
+    \ g:airline#themes#paramount#palette.normal.airline_error
+
+let g:airline#themes#paramount#palette.visual.airline_error =
+    \ g:airline#themes#paramount#palette.normal.airline_error
+
+let g:airline#themes#paramount#palette.replace.airline_error =
+    \ g:airline#themes#paramount#palette.normal.airline_error
