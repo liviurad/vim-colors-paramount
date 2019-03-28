@@ -56,7 +56,7 @@ if &background == "dark"
   let s:constant        = s:light_purple
 else
   let s:bg              = s:light_white
-  let s:bg_subtle       = s:white
+  let s:bg_subtle       = s:light_black
   let s:norm            = s:black
   let s:norm_subtle     = s:blue
   let s:purple          = s:purple
