@@ -44,8 +44,9 @@ let s:background = &background
 
 if &background == "dark"
   let s:bg              = s:black
-  let s:bg_subtle       = s:white
+  let s:bg_subtle       = s:light_black
   let s:norm            = s:light_white
+  let s:norm2           = s:white
   let s:norm_subtle     = s:light_blue
   let s:purple          = s:light_purple
   let s:cyan            = s:light_cyan
@@ -56,8 +57,9 @@ if &background == "dark"
   let s:constant        = s:light_purple
 else
   let s:bg              = s:light_white
-  let s:bg_subtle       = s:light_black
+  let s:bg_subtle       = s:white
   let s:norm            = s:black
+  let s:norm2           = s:light_black
   let s:norm_subtle     = s:blue
   let s:purple          = s:purple
   let s:cyan            = s:cyan
@@ -172,7 +174,7 @@ else
   call s:h("SpellLocal",  {"cterm": "underline", "fg": s:green})
 endif
 
-call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
+call s:h("Pmenu",         {"fg": s:norm2, "bg": s:bg_subtle})
 call s:h("PmenuSel",      {"fg": s:bg, "bg": s:norm, "gui": "bold", "cterm": "bold"})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
