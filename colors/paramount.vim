@@ -210,10 +210,10 @@ hi link ALEWarningSign	SyntasticWarningSign
 hi link ALEErrorSign	SyntasticErrorSign
 
 " Signify, git-gutter
-hi link SignifySignAdd              CursorLineNr
-hi link SignifySignDelete           CursorLineNr
-hi link SignifySignChange           CursorLineNr
-hi link GitGutterAdd                CursorLineNr
-hi link GitGutterDelete             CursorLineNr
-hi link GitGutterChange             CursorLineNr
-hi link GitGutterChangeDelete       CursorLineNr
+hi link SignifySignAdd              DiffChange
+hi link SignifySignDelete           DiffChange
+hi link SignifySignChange           DiffChange
+hi link GitGutterAdd                DiffChange
+hi link GitGutterDelete             DiffChange
+hi link GitGutterChange             DiffChange
+hi link GitGutterChangeDelete       DiffChange
