@@ -24,7 +24,7 @@ let g:colors_name='paramount'
 
 let s:none            = { "gui": "NONE",    "cterm": "NONE" }
 let s:black           = { "gui": "#1d1f21", "cterm": "0"    }
-let s:light_black     = { "gui": "#373b41", "cterm": "8"    }
+let s:light_black     = { "gui": "#373b41", "cterm": "246"  }
 let s:white           = { "gui": "#e7e7e7", "cterm": "7"    }
 let s:light_white     = { "gui": "#ffffff", "cterm": "15"   }
 let s:red             = { "gui": "#a54242", "cterm": "1"    }
@@ -142,7 +142,7 @@ call s:h("IncSearch",     {"bg": s:light_yellow, "fg": s:black})
 call s:h("Search",        {"bg": s:yellow, "fg": s:black})
 call s:h("MoreMsg",       {"fg": s:norm, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
-call s:h("LineNr",        {"fg": s:bg_subtle})
+call s:h("LineNr",        {"fg": s:norm2})
 call s:h("CursorLineNr",  {"fg": s:norm, "bg": s:bg})
 call s:h("Question",      {"fg": s:red})
 call s:h("StatusLine",    {"bg": s:bg})
